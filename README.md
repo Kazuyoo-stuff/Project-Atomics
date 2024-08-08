@@ -9,6 +9,5 @@ How To Install?
 How To Uninstall?
 - sh /sdcard/Kazu/del.sh
 
-
 Thanks, Support Me
-KazuyooOpenSources.
+- KazuyooOpenSources.
