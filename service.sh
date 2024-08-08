@@ -32,19 +32,6 @@ repeat() {
     sh $MODDIR/run.sh
 }
 
-# // Checking whether the file has been edited or not
-AuthName=$(grep "author=@KazuyooInHere" $MODDIR/module.prop) > /dev/null 2>&1;
-if ([ "$AuthName" == "author=@KazuyooInHere" ]); then
-	Launch="@KazuyooInHere";
-else
-    echo ""
-	echo "- Sorry you can't continue because"
-	echo "  there are some things you can't read."
-	echo "- Please do not change or delete any files"
-	echo ""
-	exit 1;
-fi;
-
 # // set debug
 set_debug_prop() {
     setprop debug.$1 "$2"
