@@ -1,4 +1,7 @@
 # Project Atomic's 👾
+Simple Script For Android No Root
+
+What is Project Atomic's?
 - Tools Versatile for Android without root, with selected commands to improve device performance or smoothness without needing root.
 
 It is recommended to use the Termux Terminal
@@ -9,5 +12,4 @@ How To Install?
 How To Uninstall?
 - sh /sdcard/Kazu/del.sh
 
-Thanks, Support Me
-- KazuyooOpenSources.
+thanks for using support me kazuyoo~
