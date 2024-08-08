@@ -4,10 +4,10 @@
 [ It is recommended to use the Termux Terminal ]
 
 How To Install?
-sh /sdcard/Kazu/run.sh
+- sh /sdcard/Kazu/run.sh
 
 How To Uninstall?
-sh /sdcard/Kazu/del.sh
+- sh /sdcard/Kazu/del.sh
 
 Thanks, Support Me
 KazuyooResources
