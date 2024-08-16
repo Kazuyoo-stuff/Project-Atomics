@@ -42,9 +42,9 @@ menu_properties() {
 while true; do
     clear
     echo -e
-	  sleep 0.1
-	  echo -e "- Patching Set Debug Prop..."
-  	sleep 5
+    sleep 0.1
+    echo -e "- Patching Set Debug Prop..."
+    sleep 5
     echo -e "- done...\n"
     
 # Disable Anti-Aliasing
@@ -122,9 +122,9 @@ cmd_Power() {
     clear
     echo -e ""
     echo -e "[ ! ] Use enter for main menu\n"
-	echo -e "- Menu For Cmd Power : "
-	echo -e "1. Power Adaptive\n  enables adaptive power saver.\n2. Power Saver\n  sets the power mode of the device to MODE.\n3. Power Performance\n  enables fixed performance mode\n4. Reset all Cmd Power\n  reset to all cmd power\n"
-   echo -n "Select the Number : "
+    echo -e "- Menu For Cmd Power : "
+    echo -e "1. Power Adaptive\n  enables adaptive power saver.\n2. Power Saver\n  sets the power mode of the device to MODE.\n3. Power Performance\n  enables fixed performance mode\n4. Reset all Cmd Power\n  reset to all cmd power\n"
+    echo -n "Select the Number : "
    
      power_Adaptive() {
      # Detect Value
@@ -177,10 +177,10 @@ composition_Type() {
  while true; do
     clear
     echo -e ""
-	echo -e "[ ! ] Use enter for main menu\n"
-	echo -e "- Menu For Composition Type : "
-	echo -e "1. dyn\n  for cpu & gpu\n2. gpu\n  gpu only\n3. cpu\n  cpu only\n4. mdp\n  multi depth something [ buggy on xs ]\n5. c2d\n  core to duo [ kinda like dyn only more gpu use ]\n"
-	echo -n "Select the Number : "
+    echo -e "[ ! ] Use enter for main menu\n"
+    echo -e "- Menu For Composition Type : "
+    echo -e "1. dyn\n  for cpu & gpu\n2. gpu\n  gpu only\n3. cpu\n  cpu only\n4. mdp\n  multi depth something [ buggy on xs ]\n5. c2d\n  core to duo [ kinda like dyn only more gpu use ]\n"
+    echo -n "Select the Number : "
    
      dyn() {
         set_debug_prop "composition.type" dyn
@@ -219,16 +219,16 @@ thermal_Service() {
     clear
     echo -e ""
     echo -e "[ ! ] Use enter for main menu\n"
-	echo -e "- Menu For Thermal Service : "
-	echo -e "0. None\n  no restrictions."
-	echo -e "1. Light\n  light slowdown."
-	echo -e "2. Moderate\n  moderate restrictions."
-	echo -e "3. Severe\n  severe restrictions."
-	echo -e "4. Critical\n  the platform has done everything to reduce power."
-	echo -e "5. Emergency\n  Key components in the platform were shut down due\n  to thermal conditions and limited device functionality."
-	echo -e "6. Shutdown\n  Turn it off immediately. Due to the severity of this stage, \n  the application may not be able to receive these notifications."
-	echo -e "7. Reset\n  reset to thermal service default\n"
-	echo -n "Select the Number : "
+    echo -e "- Menu For Thermal Service : "
+    echo -e "0. None\n  no restrictions."
+    echo -e "1. Light\n  light slowdown."
+    echo -e "2. Moderate\n  moderate restrictions."
+    echo -e "3. Severe\n  severe restrictions."
+    echo -e "4. Critical\n  the platform has done everything to reduce power."
+    echo -e "5. Emergency\n  Key components in the platform were shut down due\n  to thermal conditions and limited device functionality."
+    echo -e "6. Shutdown\n  Turn it off immediately. Due to the severity of this stage, \n  the application may not be able to receive these notifications."
+    echo -e "7. Reset\n  reset to thermal service default\n"
+    echo -n "Select the Number : "
    
      none() {
         cmd settings put system log_thermalservice 0
@@ -286,11 +286,11 @@ renderer_Type() {
  while true; do
     clear
     echo -e ""
-	echo -e "[ ! ] Use enter for main menu"
-	echo -e "        thanks for @zeta_zimp\n"
-	echo -e "- Menu For Rendering Type : "
-	echo -e "1. OpenGL\n  OpenGL [ Open Graphics Library ] is a cross-language, cross-platform\n  application programming interface [ API ] for rendering 2D and 3D\n  vector graphics.\n2. SkiaGL\n  Skia Graphics Engine or SkiaGL is a 2D graphics library\n3. Vulkan\n  Vulkan is a low-overhead, cross-platform graphics API, open\n  standard for 3D graphics and 3D computing.\n4. SkiaVK\n  Skia Graphics Engine or SkiaVK is a 2D graphics library\n"
-	echo -n "Select the Number : "
+    echo -e "[ ! ] Use enter for main menu"
+    echo -e "        thanks for @zeta_zimp\n"
+    echo -e "- Menu For Rendering Type : "
+    echo -e "1. OpenGL\n  OpenGL [ Open Graphics Library ] is a cross-language, cross-platform\n  application programming interface [ API ] for rendering 2D and 3D\n  vector graphics.\n2. SkiaGL\n  Skia Graphics Engine or SkiaGL is a 2D graphics library\n3. Vulkan\n  Vulkan is a low-overhead, cross-platform graphics API, open\n  standard for 3D graphics and 3D computing.\n4. SkiaVK\n  Skia Graphics Engine or SkiaVK is a 2D graphics library\n"
+    echo -n "Select the Number : "
    
      opengl() {
         set_debug_prop "stagefright.renderengine.backend" skiaglthreaded
@@ -338,9 +338,9 @@ memory_Factor() {
     clear
     echo -e ""
     echo -e "[ ! ] Use enter for main menu\n"
-	echo -e "- Menu For Memory-Factor : "
-	echo -e "1. Critical\n  set the memory factor to a critical level.\n2. Low\n  set the memory factor to low level.\n3. Normal / Reset\n  set the memory factor to normal level.\n"
-	echo -n "Select the Number : "
+    echo -e "- Menu For Memory-Factor : "
+    echo -e "1. Critical\n  set the memory factor to a critical level.\n2. Low\n  set the memory factor to low level.\n3. Normal / Reset\n  set the memory factor to normal level.\n"
+    echo -n "Select the Number : "
    
      critical() {
         am memory-factor set "CRITICAL"
@@ -372,17 +372,17 @@ just_in_time() {
     echo -e ""
     echo -e "[ ! ] Use enter for main menu\n"
     echo -e "- Compiles 3rd applications, not system applications."
-  	echo -e "- Menu For Just In Time Mode\nMODE is one of the dex2oat compiler filters : \n"
-  	echo -e "1. Assume-Verified\n  the compiler is allowed to proceed with optimizations or\n  transformations based on unverified assumptions about code\n  correctness."
-	  echo -e "2. Extract\n  the process in which certain parts of source code are\n  extracted during compilation for further use or analysis."
-  	echo -e "3. Verify\n  the process by which the compiler checks and ensures that the\n  source code conforms to certain rules and specifications."
-  	echo -e "4. Quicken\n  a compilation process designed to speed up code compilation."
-  	echo -e "5. Space-Profile\n  a compilation process that collects information\n  about memory (space) usage by a program."
-  	echo -e "6. Space\n  refers to the amount of memory used by the compiler\n  during the compilation process."
-  	echo -e "7. Speed-Profile\n  a compilation process that collects data about\n  program execution performance."
-  	echo -e "8. Speed\n  refers to the speed or time required by the\n  compiler to complete the compilation process."
-  	echo -e "9. Everything\n  the process by which the entire source code of a project\n  is compiled, without exception."
-  	echo -e "10. Everything-Profile\n  a compilation process that produces a performance profile\n  or analysis of a project's entire source code.\n"
+    echo -e "- Menu For Just In Time Mode\nMODE is one of the dex2oat compiler filters : \n"
+    echo -e "1. Assume-Verified\n  the compiler is allowed to proceed with optimizations or\n  transformations based on unverified assumptions about code\n  correctness."
+    echo -e "2. Extract\n  the process in which certain parts of source code are\n  extracted during compilation for further use or analysis."
+    echo -e "3. Verify\n  the process by which the compiler checks and ensures that the\n  source code conforms to certain rules and specifications."
+    echo -e "4. Quicken\n  a compilation process designed to speed up code compilation."
+    echo -e "5. Space-Profile\n  a compilation process that collects information\n  about memory (space) usage by a program."
+    echo -e "6. Space\n  refers to the amount of memory used by the compiler\n  during the compilation process."
+    echo -e "7. Speed-Profile\n  a compilation process that collects data about\n  program execution performance."
+    echo -e "8. Speed\n  refers to the speed or time required by the\n  compiler to complete the compilation process."
+    echo -e "9. Everything\n  the process by which the entire source code of a project\n  is compiled, without exception."
+    echo -e "10. Everything-Profile\n  a compilation process that produces a performance profile\n  or analysis of a project's entire source code.\n"
     echo -n "Select the Number : "
    
      assume() {
@@ -504,9 +504,9 @@ fstrim() {
     echo -e ""
     echo -e "[ ! ] Use enter for main menu"
     echo -e "        thanks for @tytydraco\n"
-  	echo -e "- Menu For FStrim Tweaks : "
-  	echo -e "1. Every Boot\n  Trim after rebooting.\n2. day\n  Trim after day.\n3. Other Day\n  Trim after other days.\n4. Three Days\n  Trim after three days.\n5. Week\n Trim after week.\n6. Month\n Trim after month.\n7. Reset\n Reset all trim.\n"
-  	echo -n "Select the Number : "
+    echo -e "- Menu For FStrim Tweaks : "
+    echo -e "1. Every Boot\n  Trim after rebooting.\n2. day\n  Trim after day.\n3. Other Day\n  Trim after other days.\n4. Three Days\n  Trim after three days.\n5. Week\n Trim after week.\n6. Month\n Trim after month.\n7. Reset\n Reset all trim.\n"
+    echo -n "Select the Number : "
    
      everyboot() {
         cmd settings put global fstrim_mandatory_interval 1
@@ -559,8 +559,8 @@ donate() {
     clear
     echo -e ""
     echo -e "[ ! ] Use enter for main menu\n"
-  	echo -e "1. Go To Donate\n"
-  	echo -n "Select the Number : "
+    echo -e "1. Go To Donate\n"
+    echo -n "Select the Number : "
    
      donate() {
         am start -a android.intent.action.VIEW -d https://sociabuzz.com/dikyganteng_/tribe
@@ -600,7 +600,7 @@ project_Atomic () {
       sleep 0.2
       echo -e "- Preparing Existing Tweak Features..\n"
       sleep 2
-  	  echo -e "[ - ] P-Atomic's Tweak Menu 🍀"
+      echo -e "[ - ] P-Atomic's Tweak Menu 🍀"
       echo -e "1.Setprop Tweaks         : [${SETPROP}]"
       echo -e "2.Set Cmd Power          : [${CMD}]"
       echo -e "3.Thermal Service        : [${THERMAL}]"
